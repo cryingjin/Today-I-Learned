@@ -1,5 +1,14 @@
 # ready
+rm(list=ls())
 setwd('C://Users//User//Desktop//Dev//2020_Summer_Study//RUS')
+
+# library
+library(spatstat); library(ROSE); library(glmnet); library(ncpen)
+library(ggplot2); library(corrplot); library(lars)
+library(glmnet);library(ncvreg); library(genlasso)
+library(FGSG); library(grplasso)
+library(xgboost); library(Matrix); 
+library(dplyr); library(e1071); library(caret); library(randomForest)
 
 # 1. Data load : reduced_train_0730, reduced_test_0730
 train = read.csv(file='reduced_train_0730.csv')
@@ -20,9 +29,11 @@ df3 = cbind(df3,train[,-c(1:4)])
 df4 = train['layer_4']
 df4 = cbind(df4,train[,-c(1:4)])
 
+dim(train);dim(test)
+summary(train);summary(test)
+str(train);str(test)
 
-
-
+# check na skip
 
 
 
